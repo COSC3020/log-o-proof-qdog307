@@ -23,15 +23,15 @@ $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0
 
 ## Proof:
 
-To prove $O(\log_2 n) = O(\log_5 n)$, have to show that $\log_2 n \in O(\log_5 n)$ and $\log_5 n \in O(\log_2 n)$. First, considering $\log_2 n \in O(\log_5 n)$. Using the change of base formula, $\log_2 n = \frac{\log_5 n}{\log_5 2}$. Let $c = \frac{1}{\log_5 2} > 0$ (since $\log_5 2$ is a positive constant). Then $\log_2 n \leq c \cdot \log_5 n \ \forall n \geq 1$, which satisfies the definition of $\log_2 n \in O(\log_5 n)$. 
+To prove $O(\log_a n) = O(\log_b n)$, have to show that $\log_a n \in O(\log_b n)$ and $\log_b n \in O(\log_a n)$. First, considering $\log_a n \in O(\log_b n)$. Using the change of base formula, $\log_a n = \frac{\log_b n}{\log_b a}$. Let $c = \frac{1}{\log_b a} > 0$ (since $\log_b a$ is a positive constant). Then $\log_a n \leq c \cdot \log_b n \ \forall n \geq 1$, which satisfies the definition of $\log_a n \in O(\log_b n)$. 
 
-Next,  need to consider $\log_5 n \in O(\log_2 n)$. Again, using the change of base formula, $\log_5 n = \frac{\log_2 n}{\log_2 5}$. Let $c = \frac{1}{\log_2 5} > 0$ (since $\log_2 5$ is a positive constant). Then $\log_5 n \leq c \cdot \log_2 n \ \forall n \geq 1$, which satisfies the definition of $\log_5 n \in O(\log_2 n)$.
+Next,  need to consider $\log_b n \in O(\log_a n)$. Again, using the change of base formula, $\log_b n = \frac{\log_a n}{\log_a b}$. Let $c = \frac{1}{\log_a b} > 0$ (since $\log_a b$ is a positive constant). Then $\log_b n \leq c \cdot \log_a n \ \forall n \geq 1$, which satisfies the definition of $\log_b n \in O(\log_a n)$.
 
 
 
 ## Conclusion:
 
-Since $\log_2 n \in O(\log_5 n)$ and $\log_5 n \in O(\log_2 n)$, we can conclude that $O(\log_2 n) = O(\log_5 n)$. The base of the logarithm does not affect the asymptotic complexity because logarithms with different bases differ only by a constant factor.
+Since $\log_a n \in O(\log_b n)$ and $\log_b n \in O(\log_a n)$, we can conclude that $O(\log_a n) = O(\log_b n)$. The base of the logarithm does not affect the asymptotic complexity because logarithms with different bases differ only by a constant factor.
 
 ## Sources 
 
