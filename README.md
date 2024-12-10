@@ -11,3 +11,30 @@ page](https://docs.github.com/en/get-started/writing-on-github/working-with-adva
 might help with the notation for mathematical expressions.
 
 $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0$
+
+## Proof that $O(\log_2 n) = O(\log_5 n)$
+
+
+1. **Big-O Definition**: $f(n) \in O(g(n)) \iff \exists c > 0, n_0 \geq 1: f(n) \leq c \cdot g(n) \ \forall n \geq n_0$.
+
+2. **Change of Base Formula**: $\log_a n = \frac{\log_b n}{\log_b a}$.
+
+
+
+## Proof:
+
+To prove $O(\log_2 n) = O(\log_5 n)$, we need to show that $\log_2 n \in O(\log_5 n)$ and $\log_5 n \in O(\log_2 n)$. First, consider $\log_2 n \in O(\log_5 n)$. Using the change of base formula, $\log_2 n = \frac{\log_5 n}{\log_5 2}$. Let $c = \frac{1}{\log_5 2} > 0$ (since $\log_5 2$ is a positive constant). Then $\log_2 n \leq c \cdot \log_5 n \ \forall n \geq 1$, which satisfies the definition of $\log_2 n \in O(\log_5 n)$. 
+
+Next, consider $\log_5 n \in O(\log_2 n)$. Again, using the change of base formula, $\log_5 n = \frac{\log_2 n}{\log_2 5}$. Let $c = \frac{1}{\log_2 5} > 0$ (since $\log_2 5$ is a positive constant). Then $\log_5 n \leq c \cdot \log_2 n \ \forall n \geq 1$, which satisfies the definition of $\log_5 n \in O(\log_2 n)$.
+
+
+
+## Conclusion:
+
+Since $\log_2 n \in O(\log_5 n)$ and $\log_5 n \in O(\log_2 n)$, we conclude that $O(\log_2 n) = O(\log_5 n)$. The base of the logarithm does not affect the asymptotic complexity because logarithms with different bases differ only by a constant factor.
+
+## Sources 
+
+https://cs.stackexchange.com/questions/76361/asymptotic-relationship-of-logarithms-in-different-bases 
+https://www.cuemath.com/change-of-base-formula/ 
+https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/
