@@ -23,7 +23,7 @@ $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0
 
 ## Proof:
 
-To prove $O(\log_a n) = O(\log_b n)$, have to show that $\log_a n \in O(\log_b n)$ and $\log_b n \in O(\log_a n)$. First, considering $\log_a n \in O(\log_b n)$. Using the change of base formula, $\log_a n = \frac{\log_b n}{\log_b a}$. Let $c = \frac{1}{\log_b a} > 0$ (since $\log_b a$ is a positive constant). Then $\log_a n \leq c \cdot \log_b n \ \forall n \geq 1$, which satisfies the definition of $\log_a n \in O(\log_b n)$. 
+To prove $O(\log_a n) = O(\log_b n)$. First, considering $\log_a n \in O(\log_b n)$. Using the change of base formula, $\log_a n = \frac{\log_b n}{\log_b a}$. Let $c = \frac{1}{\log_b a} > 0$ (since $\log_b a$ is a positive constant). Then $\log_a n \leq c \cdot \log_b n \ \forall n \geq 1$, which satisfies the definition of $\log_a n \in O(\log_b n)$. 
 
 Next,  need to consider $\log_b n \in O(\log_a n)$. Again, using the change of base formula, $\log_b n = \frac{\log_a n}{\log_a b}$. Let $c = \frac{1}{\log_a b} > 0$ (since $\log_a b$ is a positive constant). Then $\log_b n \leq c \cdot \log_a n \ \forall n \geq 1$, which satisfies the definition of $\log_b n \in O(\log_a n)$.
 
